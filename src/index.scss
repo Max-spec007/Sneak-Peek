@@ -1,21 +1,52 @@
 // $primary:	#000000;
-$primary: #FFFFFF;
+$primary: #fff;
 @import '~bootstrap/scss/bootstrap';
 
 .title {
-  color: red;
+  color: #f00;
   // font-family:;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .home {
-  color: red;
+  color: #f00;
+  font-size: 20px;
 }
 
 .about {
-  color: red;
+  color: #f00;
+  font-size: 20px;
 }
 
 .sign-in {
-  color: red;
+  color: #f00;
 }
+
+input {
+  margin-left: 650px;
+  margin-top: 100px;
+  // color: #f00;
+}
+
+.resume-right-col {
+  // background:
+  color: white;
+}
+
+// body {
+//   margin-left: 200px;
+//   font-family: -apple-system, BlinkMacSystemFont,'MarloweSwirl Regular';
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// .pa2 {
+//   padding: .5rem;
+// }
+//
+
+
+// code {
+//   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+//     monospace;
+// }

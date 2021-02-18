@@ -1,4 +1,6 @@
 import React, { Component, Fragment } from 'react'
+// import React, { Component } from 'react'
+// import CardList from './CardList'
 import { Route } from 'react-router-dom'
 import { v4 as uuid } from 'uuid'
 
@@ -9,6 +11,9 @@ import SignUp from './components/SignUp/SignUp'
 import SignIn from './components/SignIn/SignIn'
 import SignOut from './components/SignOut/SignOut'
 import ChangePassword from './components/ChangePassword/ChangePassword'
+import SearchBox from './components/SearchBox/SearchBox'
+// import About from './components/About/About'
+// import { shoes } from './Shoes'
 
 class App extends Component {
   constructor (props) {
@@ -16,8 +21,30 @@ class App extends Component {
     this.state = {
       user: null,
       msgAlerts: []
+      // shoes: shoes,
+      // searchfield: ''
     }
   }
+
+  //   onSearchChange = (event) => {
+  //   this.setState({ searchfield: event.target.value })
+  //   }
+  //
+  //   render () {
+  //     const filteredShoes = this.state.shoes.filter(shoes => {
+  //       return shoes.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
+  //     })
+  //     return (
+  //       <div className = 'tc'>
+  //         <h1 className = 'f1'>Welcome to KicKs!</h1>
+  //         <SearchBox searchChange = {this.onSearchChange}/>
+  //         <CardList shoes={filteredShoes}/>
+  //       </div>
+  //     )
+  //   }
+  // }
+  //
+  // export default App
 
   setUser = user => this.setState({ user })
 
@@ -52,6 +79,7 @@ class App extends Component {
             deleteAlert={this.deleteAlert}
           />
         ))}
+        <SearchBox searchChange = {this.onSearchChange}/>
         <main className="container">
           <Route path='/sign-up' render={() => (
             <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
