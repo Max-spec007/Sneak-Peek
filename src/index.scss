@@ -1,1 +1,21 @@
+// $primary:	#000000;
+$primary: #FFFFFF;
 @import '~bootstrap/scss/bootstrap';
+
+.title {
+  color: red;
+  // font-family:;
+  font-size: 25px;
+}
+
+.home {
+  color: red;
+}
+
+.about {
+  color: red;
+}
+
+.sign-in {
+  color: red;
+}
