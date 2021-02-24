@@ -11,21 +11,20 @@ const authenticatedOptions = (
 
 const unauthenticatedOptions = (
   <Fragment>
-    <Nav.Link href="#about"><div className='about'>About</div></Nav.Link>
-    <Nav.Link href="#sign-in"><div className='sign-in'>Sign In</div></Nav.Link>
   </Fragment>
 )
 
 const alwaysOptions = (
   <Fragment>
     <Nav.Link href="#/"><div className='home'>Home</div></Nav.Link>
+    <Nav.Link href="#about"><div className='about'>About</div></Nav.Link>
   </Fragment>
 )
 
 const Header = ({ user }) => (
   <Navbar bg="primary" variant="dark" expand="md">
     <Navbar.Brand href="#">
-      <div className='title'>KicKs!</div>
+      <div className='title'>Sneak <span className='title2'>PeeK</span></div>
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">

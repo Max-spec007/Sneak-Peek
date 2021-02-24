@@ -1,13 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.scss'
+import 'tachyons'
 
 import App from './App'
 import { HashRouter } from 'react-router-dom'
 
 const appJsx = (
   <HashRouter>
-    <App />
+    <div className='body'>
+      <App />
+    </div>
   </HashRouter>
 )
 

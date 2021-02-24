@@ -79,7 +79,9 @@ class App extends Component {
             deleteAlert={this.deleteAlert}
           />
         ))}
-        <SearchBox searchChange = {this.onSearchChange}/>
+        <div className='tc'>
+          <SearchBox searchChange = {this.onSearchChange}/>
+        </div>
         <main className="container">
           <Route path='/sign-up' render={() => (
             <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
