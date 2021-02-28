@@ -1,19 +1,11 @@
 import React, { Component, Fragment } from 'react'
-// import React, { Component } from 'react'
-// import CardList from './CardList'
 import { Route } from 'react-router-dom'
 import { v4 as uuid } from 'uuid'
-
-import AuthenticatedRoute from './components/AuthenticatedRoute/AuthenticatedRoute'
 import AutoDismissAlert from './components/AutoDismissAlert/AutoDismissAlert'
 import Header from './components/Header/Header'
-import SignUp from './components/SignUp/SignUp'
-import SignIn from './components/SignIn/SignIn'
-import SignOut from './components/SignOut/SignOut'
-import ChangePassword from './components/ChangePassword/ChangePassword'
-import SearchBox from './components/SearchBox/SearchBox'
-// import About from './components/About/About'
-// import { shoes } from './Shoes'
+// import SearchBox from './components/SearchBox/SearchBox'
+import About from './components/About/About'
+import Home from './components/Home/Home'
 
 class App extends Component {
   constructor (props) {
@@ -21,30 +13,8 @@ class App extends Component {
     this.state = {
       user: null,
       msgAlerts: []
-      // shoes: shoes,
-      // searchfield: ''
     }
   }
-
-  //   onSearchChange = (event) => {
-  //   this.setState({ searchfield: event.target.value })
-  //   }
-  //
-  //   render () {
-  //     const filteredShoes = this.state.shoes.filter(shoes => {
-  //       return shoes.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
-  //     })
-  //     return (
-  //       <div className = 'tc'>
-  //         <h1 className = 'f1'>Welcome to KicKs!</h1>
-  //         <SearchBox searchChange = {this.onSearchChange}/>
-  //         <CardList shoes={filteredShoes}/>
-  //       </div>
-  //     )
-  //   }
-  // }
-  //
-  // export default App
 
   setUser = user => this.setState({ user })
 
@@ -79,22 +49,13 @@ class App extends Component {
             deleteAlert={this.deleteAlert}
           />
         ))}
-        <div className='tc'>
-          <SearchBox searchChange = {this.onSearchChange}/>
-        </div>
         <main className="container">
-          <Route path='/sign-up' render={() => (
-            <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
-          )} />
-          <Route path='/sign-in' render={() => (
-            <SignIn msgAlert={this.msgAlert} setUser={this.setUser} />
-          )} />
-          <AuthenticatedRoute user={user} path='/sign-out' render={() => (
-            <SignOut msgAlert={this.msgAlert} clearUser={this.clearUser} user={user} />
-          )} />
-          <AuthenticatedRoute user={user} path='/change-password' render={() => (
-            <ChangePassword msgAlert={this.msgAlert} user={user} />
-          )} />
+          <Route exact path='/about' render= {() => (
+            <About />
+          )}/>
+          <Route exact path='/' render= {() => (
+            <Home />
+          )}/>
         </main>
       </Fragment>
     )

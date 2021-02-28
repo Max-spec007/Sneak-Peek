@@ -1,16 +1,15 @@
 import React from 'react'
-import './MainSection.css'
-import { Button } from 'antd'
 
-const MainSection = () => {
+export const AboutPage = () => {
   return (
-    <div className='main-textbox'>
-      <h1 className='main-headline'>Welcome to Sneak Peek!</h1>
-      <div className='main-line'></div>
-      <p className='main-intro'>I work hard to educate shoe enthusiasts on the history of some of the Worlds well known skeakers.</p>
-      <Button type="primary" className='main-button'>Learn More</Button>
+    <div className='textwrap'>
+      <div className='image'></div>
+      <h1 className='about-headline'>Welcome!</h1>
+      <p className='about-intro'>I work hard to educate shoe enthusiasts on the history of some the Worlds most famous sneakers. The goal of Sneak Peek is to be an encyclopedia of different sneaker histories and the inspiration behind the creation of different sneaker models. I believe in the quote knowledge is power, so here you go! I hope everyone can enjoy this app and learn something new about their favorite sneakers. This app allows the user to search by brand, functionality, and trend.</p>
+      <h2 className='about-developer'>About the Developer</h2>
+      <p className='about-me'>This is where I will talk about me and my passions and love for sneakers.</p>
     </div>
   )
 }
 
-export default MainSection
+export default AboutPage

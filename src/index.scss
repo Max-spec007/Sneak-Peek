@@ -1,10 +1,4 @@
-// $primary:	#000000;
 $primary: #fff;
-// $primary: #007CC7;
-// $primary: #393f4d;
-// $primary: #ac72f4;
-// $primary: #cbd7f0;
-// $primary: #b48c36;
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
@@ -14,10 +8,10 @@ $primary: #fff;
   color: #ff0080;
   font-size: 40px;
   margin: -5px;
-  margin-left: 35px;
+  margin-left: 65px;
   font-family: 'Luckiest Guy';
 }
-
+//
 .title2 {
   font-family: 'Orbitron', sans-serif;
 }
@@ -31,9 +25,9 @@ $primary: #fff;
 // // background: linear-gradient(to right, #464c53 16%, #ff8ab3 100%);
 // }
 
-// .bg-primary {
-//   margin: -5px;
-// }
+.bg-primary {
+  margin: -5px;
+}
 
 
 .home {
@@ -44,22 +38,76 @@ $primary: #fff;
 .about {
   color: #f00;
   font-size: 30px;
-  margin-right: 35px;
+  margin-right: 12vh;
 }
 
-.sign-in {
-  color: #f00;
+
+.about-headline {
+  font-size: 50px;
+  color: #ffa500;
 }
 
-.body {
+.about-developer {
+  color: #ffa500;
+}
+
+.about-intro {
+  font-size: 1.5rem;
+}
+
+.about-me {
+  font-size: 1.5rem;
+}
+
+.image {
+  background: url('./Nothing-But-Soul.jpg') center center / cover no-repeat;
+  background-size: contain;
+  float: right;
+  width: 63vh;
+  height: 85vh;
+  margin: 10px;
+}
+
+
+.tc {
   background-image: url('./Sneak-Peek-Background.png');
-  position: fixed;
-  width: 100%;
-  height: 100%;
+  // position: none;
+  width: 110%;
+  height: 100vh;
   background-size: cover;
-  background-repeat: no-repeat;
-  // background-position: center;
+  // margin-bottom: auto;
+  // margin: 0;
+  // background-repeat: no-repeat;
+  // display: flex;
+  // align-items: center;
+  // object-fit: contain;
+  background-position: center;
+  position: sticky;
+  // top: 70px;
+  // left: 0;
+  // right: 0;
+  // bottom: 0;
+  // margin: auto;
+  // min-width: 50%;
+  // min-height: 50%;
 }
+
+
+
+//
+// .sign-in {
+//   color: #f00;
+// }
+//
+// .body {
+//   background-image: url('./Sneak-Peek-Background.png');
+//   position: fixed;
+//   width: 100%;
+//   height: 100%;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   // background-position: center;
+// }
 
 // input {
 //   margin-left: 650px;
@@ -67,12 +115,12 @@ $primary: #fff;
 //   // color: #f00;
 // }
 
-// .part1 {
-//   padding: .5rem;
-// }
-//
+.part1 {
+  padding: .5rem;
+}
+
 .part2 {
-  padding: 1rem;
-  margin-top: 25%;
-  width: 400px;
+  // padding: 1rem;
+  margin-top: 45vh;
+  // width: 400px;
 }
