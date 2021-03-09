@@ -1,11 +1,13 @@
 import React, { Component, Fragment } from 'react'
 import { Route } from 'react-router-dom'
-import { v4 as uuid } from 'uuid'
+// import { v4 as uuid } from 'uuid'
 import AutoDismissAlert from './components/AutoDismissAlert/AutoDismissAlert'
 import Header from './components/Header/Header'
 // import SearchBox from './components/SearchBox/SearchBox'
 import About from './components/About/About'
 import Home from './components/Home/Home'
+import ShoeList from './components/ShoeList/ShoeList'
+import ShoeInput from './components/ShoeInput/ShoeInput'
 
 class App extends Component {
   constructor (props) {
@@ -16,22 +18,22 @@ class App extends Component {
     }
   }
 
-  setUser = user => this.setState({ user })
-
-  clearUser = () => this.setState({ user: null })
-
-  deleteAlert = (id) => {
-    this.setState((state) => {
-      return { msgAlerts: state.msgAlerts.filter(msg => msg.id !== id) }
-    })
-  }
-
-  msgAlert = ({ heading, message, variant }) => {
-    const id = uuid()
-    this.setState((state) => {
-      return { msgAlerts: [...state.msgAlerts, { heading, message, variant, id }] }
-    })
-  }
+  // setUser = user => this.setState({ user })
+  //
+  // clearUser = () => this.setState({ user: null })
+  //
+  // deleteAlert = (id) => {
+  //   this.setState((state) => {
+  //     return { msgAlerts: state.msgAlerts.filter(msg => msg.id !== id) }
+  //   })
+  // }
+  //
+  // msgAlert = ({ heading, message, variant }) => {
+  //   const id = uuid()
+  //   this.setState((state) => {
+  //     return { msgAlerts: [...state.msgAlerts, { heading, message, variant, id }] }
+  //   })
+  // }
 
   render () {
     const { msgAlerts, user } = this.state
@@ -57,6 +59,10 @@ class App extends Component {
             <Home />
           )}/>
         </main>
+        <div>
+          <ShoeInput />
+          <ShoeList />
+        </div>
       </Fragment>
     )
   }
