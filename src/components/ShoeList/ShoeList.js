@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+// import Card from './Card'
 
 class ShoeList extends React.Component {
   state = {
@@ -19,21 +20,17 @@ class ShoeList extends React.Component {
     let shoes = ''
     if (sneakers.length !== 0) {
       shoes = (
-        sneakers.results.map(sneaker => <li key={sneaker.id}>{sneaker.brand}{sneaker.name}{sneaker.releaseDate}{sneaker.year}</li>)
+        sneakers.results.map(sneaker => <li key={sneaker.id}>{sneaker.brand}{sneaker.name}{sneaker.releaseDate}</li>)
       )
     } else {
-      shoes = '....Loading'
+      shoes = '...Loading'
     }
 
     return (
-      <div>
-        <ul> {shoes}
-        </ul>
-      </div>
+      <ul>
+        {shoes}
+      </ul>
     )
-
-    // return <ul>
-    // </ul>
   }
 }
 
