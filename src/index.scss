@@ -41,6 +41,16 @@ $primary: #fff;
   margin-right: 12vh;
 }
 
+.sneakers {
+  color: #f00;
+  font-size: 30px;
+  margin-left: -12vh;
+}
+
+.images {
+  color: #f00;
+  font-size: 30px;
+}
 
 .about-headline {
   font-size: 50px;
@@ -92,8 +102,47 @@ $primary: #fff;
   // min-height: 50%;
 }
 
-.ShoeList {
+.shoeList {
   text-align: center;
+  background-color: white;
+}
+
+.card-container {
+  background-color: white;
+  width: 355px;
+  height: 355px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  margin-top: 80px;
+  transition: 0.3s;
+  // margin: 60px 10px 10px;
+  margin: 10px;
+  padding: 10px;
+  background-position: center;
+  margin-left: 45px;
+  // margin-right: auto;
+  // transition: 0.5s;
+  // animation: ease-in-out;
+  animation: ease-in;
+}
+
+.card-container:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px 10px #ffa500;
+}
+
+.image-container img {
+  overflow: hidden;
+  height: 200px;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 1em;
+  width: 20px;
+  margin-top: 30px;
+  // grid-auto-flow: row;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 // .card__container {
@@ -154,4 +203,5 @@ $primary: #fff;
   margin-top: 47vh;
   // margin-top: 45vh;
   width: 320px;
+  margin-left: 5px;
 }

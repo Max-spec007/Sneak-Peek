@@ -20,7 +20,7 @@ class ShoeList extends React.Component {
     let shoes = ''
     if (sneakers.length !== 0) {
       shoes = (
-        sneakers.results.map(sneaker => <li key={sneaker.id}>{sneaker.brand}{sneaker.name}{sneaker.releaseDate}</li>)
+        sneakers.results.map(sneaker => <li key={sneaker.id}>{sneaker.brand} {sneaker.name} {sneaker.releaseDate} </li>)
       )
     } else {
       shoes = '...Loading'

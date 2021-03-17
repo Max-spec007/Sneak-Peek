@@ -6,7 +6,7 @@ const alwaysOptions = (
   <Fragment>
     <Nav.Link href="#/"><div className='home'>Home</div></Nav.Link>
     <Nav.Link href="#about"><div className='about'>About</div></Nav.Link>
-    <Nav.Link href="#sneakers"><div className='about'>Sneakers</div></Nav.Link>
+    <Nav.Link href="#sneakers"><div className='sneakers'>Sneakers</div></Nav.Link>
   </Fragment>
 )
 
@@ -26,3 +26,5 @@ const Header = ({ user }) => (
 )
 
 export default Header
+
+// <Nav.Link href="#images"><div className='images'>Images</div></Nav.Link> (In const alwaysOptions between line 9 and 10)
