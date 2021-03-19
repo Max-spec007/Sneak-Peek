@@ -45,6 +45,7 @@ $primary: #fff;
   color: #f00;
   font-size: 30px;
   margin-left: -12vh;
+  margin-right: 12vh;
 }
 
 .images {
@@ -119,8 +120,8 @@ $primary: #fff;
   margin: 10px;
   padding: 10px;
   background-position: center;
-  margin-left: 45px;
-  // margin-right: auto;
+  margin-left: -5px;
+  margin-right: 5px;
   // transition: 0.5s;
   // animation: ease-in-out;
   animation: ease-in;
@@ -145,6 +146,11 @@ $primary: #fff;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+// .container {
+//   flex-wrap: wrap;
+//   display: flex;
+//   flex-direction: row;
+// }
 // .card__container {
 //     display: flex;
 //     flex-direction: column;

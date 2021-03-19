@@ -1,10 +1,16 @@
 import React from 'react'
-import SearchBox from './SearchBox'
 
-export const Home = () => {
+export const Home = ({ onSearchChange }) => {
   return (
     <div className='tc'>
-      <SearchBox searchChange = {this.onSearchChange} />
+      <div className='part1'>
+        <input
+          className='part2'
+          type='search'
+          placeholder='Search Shoes'
+          onChange={onSearchChange}
+        />
+      </div>
     </div>
   )
 }

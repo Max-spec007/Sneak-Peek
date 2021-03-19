@@ -1,35 +1,40 @@
 import React from 'react'
 import axios from 'axios'
-// import Card from './Card'
+import Card from '../Card/Card.js'
 
 class ShoeList extends React.Component {
-  state = {
-    sneakers: []
-  }
-
   componentDidMount () {
     axios.get('https://api.thesneakerdatabase.com/v1/sneakers?limit=50')
       .then(res => {
-        this.setState({ sneakers: res.data })
+        this.props.setSneaker(res.data)
         // console.log('Hey', res, this.state.sneakers)
       })
   }
 
   render () {
-    const { sneakers } = this.state
+    const { sneakers } = this.props
     let shoes = ''
     if (sneakers.length !== 0) {
       shoes = (
-        sneakers.results.map(sneaker => <li key={sneaker.id}>{sneaker.brand} {sneaker.name} {sneaker.releaseDate} </li>)
+        sneakers.results.map(sneaker =>
+          <Card key ={sneaker.id}
+            title= {sneaker.brand}
+            name= {sneaker.name}
+            imageUrl= {sneaker.media.imageUrl}
+            body= {sneaker.releaseDate}
+          />
+        )
       )
     } else {
       shoes = '...Loading'
     }
 
     return (
-      <ul>
-        {shoes}
-      </ul>
+      <div className='container'>
+        <div className='grid'>
+          {shoes}
+        </div>
+      </div>
     )
   }
 }
