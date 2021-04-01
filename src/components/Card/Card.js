@@ -1,20 +1,12 @@
 import React from 'react'
 
-function Card ({ title, imageUrl, body, name, releaseDate }) {
+function Card (props) {
   return (
     <div className='card-container'>
-      <div className='image-container'>
-        <img src={imageUrl} alt='' />
-      </div>
-      <div className='card-title'>
-        <h3>{title}</h3>
-      </div>
-      <div className='card-name'>
-        <h8>{name}</h8>
-      </div>
-      <div className='card-body'>
-        <p>{body}</p>
-      </div>
+      <img alt={props.sneaker.name} src={props.sneaker.media.imageUrl} />
+      <h2>{props.sneaker.brand}</h2>
+      <h6>{props.sneaker.name}</h6>
+      <p>{props.sneaker.releaseDate}</p>
     </div>
   )
 }

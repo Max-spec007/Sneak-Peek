@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom'
 // import AutoDismissAlert from './components/AutoDismissAlert/AutoDismissAlert'
 import Header from './components/Header/Header'
 import About from './components/About/About'
-import Home from './components/Home/Home'
+import SearchBox from './components/Home/Home'
 import ShoeList from './components/ShoeList/ShoeList'
 // import SearchBox from './components/Home/SearchBox'
 // import ShoeInput from './components/ShoeInput/ShoeInput'
@@ -18,12 +18,19 @@ class App extends Component {
     }
   }
 
-  setSneaker = (sneakers) => {
-    this.setState({ sneakers: sneakers })
+  componentDidMount () {
+    fetch('https://api.thesneakerdatabase.com/v1/sneakers?limit=100')
+      .then(res => res.json())
+      .then(sneakers => (this.setState({ sneakers: sneakers.results })))
+      .catch(console.error)
   }
 
-  onSearchChange = (event) => {
-    this.setState({ searchfield: event.target.value })
+  // setSneaker = (sneakers) => {
+  //   this.setState({ sneakers: sneakers })
+  // }
+
+  searchChange = (event) => {
+    this.setState({ searchField: event.target.value })
   }
 
   // setUser = user => this.setState({ user })
@@ -33,24 +40,28 @@ class App extends Component {
   // }
   //
   render () {
-    const { user } = this.state
+    const { sneakers, searchField } = this.state
+    const filterSneaker = sneakers.filter(sneaker =>
+      sneaker.brand.toLowerCase().includes(searchField.toLowerCase())
+    )
 
     return (
       <Fragment>
-        <Header user={user} />
+        <Header />
         <main className="container">
           <Route exact path='/about' render= {() => (
             <About />
           )}/>
           <Route exact path='/' render= {() => (
-            <Home sneakers = {this.state.sneakers} onSearchChange = {this.onSearchChange} searchField = {this.state.searchField} />
+            <SearchBox placeholder='Search Shoes' searchChange={this.searchChange} />
           )}/>
+          <Route exact path='/' render= {() => (
+            <ShoeList sneakers={filterSneaker} />
+          )}/>
+          <div>
+            {console.log(searchField) }
+          </div>
         </main>
-        <div className='shoeList'>
-          <Route exact path='/sneakers' render= {() => (
-            <ShoeList setSneaker = {this.setSneaker} sneakers = {this.state.sneakers} />
-          )}/>
-        </div>
       </Fragment>
     )
   }

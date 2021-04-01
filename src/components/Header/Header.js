@@ -6,7 +6,6 @@ const alwaysOptions = (
   <Fragment>
     <Nav.Link href="#/"><div className='home'>Home</div></Nav.Link>
     <Nav.Link href="#about"><div className='about'>About</div></Nav.Link>
-    <Nav.Link href="#sneakers"><div className='sneakers'>Sneakers</div></Nav.Link>
   </Fragment>
 )
 

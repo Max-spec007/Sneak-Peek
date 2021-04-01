@@ -81,7 +81,7 @@ $primary: #fff;
 
 
 .tc {
-  background-image: url('./Sneak-Peek-Background.png');
+  background-image: url('./Sneak-Peek-Background-2.png');
   // position: none;
   width: 100%;
   height: 100vh;
@@ -90,10 +90,9 @@ $primary: #fff;
   // margin: 0;
   // background-repeat: no-repeat;
   // display: flex;
-  // align-items: center;
+  align-items: center;
   // object-fit: contain;
   background-position: center;
-  position: sticky;
   // top: 70px;
   // left: 0;
   // right: 0;
@@ -120,7 +119,7 @@ $primary: #fff;
   margin: 10px;
   padding: 10px;
   background-position: center;
-  margin-left: -5px;
+  margin-left: 2px;
   margin-right: 5px;
   // transition: 0.5s;
   // animation: ease-in-out;
@@ -146,11 +145,11 @@ $primary: #fff;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-// .container {
-//   flex-wrap: wrap;
-//   display: flex;
-//   flex-direction: row;
-// }
+.container {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+}
 // .card__container {
 //     display: flex;
 //     flex-direction: column;

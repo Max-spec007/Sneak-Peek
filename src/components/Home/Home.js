@@ -1,18 +1,18 @@
 import React from 'react'
 
-export const Home = ({ onSearchChange }) => {
+export const SearchBox = ({ placeholder, searchChange }) => {
   return (
     <div className='tc'>
       <div className='part1'>
         <input
           className='part2'
           type='search'
-          placeholder='Search Shoes'
-          onChange={onSearchChange}
+          placeholder={placeholder}
+          onChange={ searchChange }
         />
       </div>
     </div>
   )
 }
 
-export default Home
+export default SearchBox
