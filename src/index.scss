@@ -55,6 +55,7 @@ $primary: #fff;
 }
 
 .about-developer {
+  font-size: 50px;
   color: #ffa500;
 }
 
@@ -71,8 +72,9 @@ $primary: #fff;
   background-size: contain;
   float: right;
   width: 63vh;
-  height: 85vh;
-  margin: 10px;
+  height: 70vh;
+  margin: 5px;
+  margin-top: 30px;
 }
 
 .navbar-dark .navbar-toggler-icon {
@@ -93,57 +95,29 @@ $primary: #fff;
 
 .tc {
   background: url('./Sneak-Peek-Background.png') center center / cover no-repeat;
-  // position: none;
   width: 100%;
-  // height: 100%;
   margin: auto;
   height: 100vh;
   background-size: 100% 100%;
   justify-content: center;
-  // margin-bottom: auto;
-  // margin: 0;
-  // background-repeat: no-repeat;
-  // display: flex;
-  // align-items: center;
-  // object-fit: contain;
-  // background-position: center;
-  // top: 70px;
-  // left: 0;
-  // right: 0;
-  // bottom: 0;
-  // margin: auto;
-  // min-width: 50%;
-  // min-height: 50%;
 }
 
 .shoeList {
   width: 100%;
-  // background-size: contain;
-  // text-align: center;
-  // background-color: white;
-  // background-position: center;
 }
 
 .card-container {
   background-color: white;
   height: 100%;
-  // width: 23.8vw;
-  // width: 37.6vh;
   text-align: center;
   overflow: hidden;
   box-shadow: 0px 0px 15px -5px;
   margin-top: 40px;
   transition: 0.3s;
-  // margin: 60px 10px 10px;
   margin: auto;
   padding: 10px;
   background-position: center;
-  // margin-left: 2px;
-  // margin-right: 5px;
-  // transition: 0.5s;
-  // animation: ease-in-out;
   animation: ease-in;
-  // background-size: contain;
 }
 
 .card-container:hover {
@@ -156,79 +130,10 @@ $primary: #fff;
   height: 200px;
 }
 
-// .grid {
-//   display: grid;
-//   grid-gap: 1em;
-//   width: 20px;
-//   margin-top: 30px;
-//   // grid-auto-flow: row;
-//   grid-template-columns: 1fr 1fr 1fr;
-// }
-
-// .container {
-//   flex-wrap: wrap;
-//   display: flex;
-//   flex-direction: row;
-// }
-// .card__container {
-//     display: flex;
-//     flex-direction: column;
-//     text-align: center;
-//     background-color: #95dada;
-//     border: 1px solid grey;
-//     border-radius: 5px;
-//     padding: 25px;
-//     cursor: pointer;
-//     -moz-osx-font-smoothing: grayscale;
-//     backface-visibility: hidden;
-//     transform: translateZ(0);
-//     transition: transform 0.25s ease-out;
-//     max-width: 250px;
-// }
-//
-// .card__container:hover {
-//     transform: scale(1.05);
-// }
-//
-// .cardlist__cardlist {
-//     width: 85vw;
-//     margin: 0 auto;
-//     display: grid;
-//     grid-template-columns: 1fr 1fr 1fr 1fr;
-//     grid-gap: 20px;
-// }
-
-//
-// .sign-in {
-//   color: #f00;
-// }
-//
-// .body {
-//   background-image: url('./Sneak-Peek-Background.png');
-//   position: fixed;
-//   width: 100%;
-//   height: 100%;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   // background-position: center;
-// }
-
-// .input {
-//   margin-left: 650px;
-//   margin-top: 100px;
-//   // color: #f00;
-// }
-
-.part1 {
-  // padding: .5rem;
-  // margin: none;
-}
-
 .part2 {
   padding: 1rem;
   margin-top: 47vh;
   margin-bottom: 44vh;
-  // margin-top: 45vh;
   width: 50%;
   margin-left: 5px;
 }
@@ -272,7 +177,6 @@ $primary: #fff;
     align-items: center;
     grid-template-columns: auto auto auto;
     box-sizing: border-box;
-    // margin: auto;
   }
 }
 
@@ -332,26 +236,3 @@ $primary: #fff;
     box-sizing: border-box;
   }
 }
-
-// @media screen and (max-width: 1920px) {
-//   .gridWrapper {
-//     height: 100%;
-//     display: grid;
-//     justify-content: center;
-//     align-items: center;
-//     grid-template-columns: auto auto auto;
-//     box-sizing: border-box;
-//   }
-// }
-
-// @media screen and (max-width: 640px) {
-//   .shoeList {
-//     width: 100%;
-//   }
-// }
-
-// @media (min-width: 576px) {
-// .grid {
-//    width: 100%;
-//     }
-// }

@@ -25,5 +25,3 @@ const Header = ({ user }) => (
 )
 
 export default Header
-
-// <Nav.Link href="#images"><div className='images'>Images</div></Nav.Link> (In const alwaysOptions between line 9 and 10)

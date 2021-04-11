@@ -1,13 +1,9 @@
 import React, { Component, Fragment } from 'react'
 import { Route } from 'react-router-dom'
-// import { v4 as uuid } from 'uuid'
-// import AutoDismissAlert from './components/AutoDismissAlert/AutoDismissAlert'
 import Header from './components/Header/Header'
 import About from './components/About/About'
 import SearchBox from './components/Home/Home'
 import ShoeList from './components/ShoeList/ShoeList'
-// import SearchBox from './components/Home/SearchBox'
-// import ShoeInput from './components/ShoeInput/ShoeInput'
 
 class App extends Component {
   constructor (props) {
@@ -25,20 +21,10 @@ class App extends Component {
       .catch(console.error)
   }
 
-  // setSneaker = (sneakers) => {
-  //   this.setState({ sneakers: sneakers })
-  // }
-
   searchChange = (event) => {
     this.setState({ searchField: event.target.value })
   }
 
-  // setUser = user => this.setState({ user })
-
-  // handleChange = e => {
-  //   this.setState({ searchField: e.target.value })
-  // }
-  //
   render () {
     const { sneakers, searchField } = this.state
     const filterSneaker = sneakers.filter(sneaker =>
@@ -53,7 +39,7 @@ class App extends Component {
             <About />
           )}/>
           <Route exact path='/' render= {() => (
-            <SearchBox placeholder='Search Shoes' searchChange={this.searchChange} />
+            <SearchBox placeholder='Search By Brand' searchChange={this.searchChange} />
           )}/>
           <Route exact path='/' render= {() => (
             <ShoeList sneakers={filterSneaker} />
