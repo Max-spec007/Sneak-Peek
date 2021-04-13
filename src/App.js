@@ -22,6 +22,9 @@ class App extends Component {
   }
 
   searchChange = (event) => {
+    if (event.currentTarget.value.includes(' ')) {
+      event.currentTarget.value = event.currentTarget.value.replace(/\s/g, '')
+    }
     this.setState({ searchField: event.target.value })
   }
 
@@ -31,6 +34,12 @@ class App extends Component {
       sneaker.brand.toLowerCase().includes(searchField.toLowerCase())
     )
 
+    const handleKeyDown = e => {
+      if (e.key === '') {
+        e.preventDefault()
+      }
+    }
+
     return (
       <Fragment>
         <Header />
@@ -39,7 +48,7 @@ class App extends Component {
             <About />
           )}/>
           <Route exact path='/' render= {() => (
-            <SearchBox placeholder='Search By Brand' searchChange={this.searchChange} />
+            <SearchBox type='text' onKeyDown={handleKeyDown} placeholder='Search By Brand' searchChange={this.searchChange} />
           )}/>
           <Route exact path='/' render= {() => (
             <ShoeList sneakers={filterSneaker} />
