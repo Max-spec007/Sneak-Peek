@@ -15,7 +15,13 @@ class App extends Component {
   }
 
   componentDidMount () {
-    fetch('https://api.thesneakerdatabase.com/v1/sneakers?limit=100')
+    fetch('https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=100', {
+      'method': 'GET',
+      'headers': {
+        'x-rapidapi-key': 'b1bfbf9d9bmsh4e39189efcf81cep13728ejsndff6005dd49f',
+        'x-rapidapi-host': 'v1-sneakers.p.rapidapi.com'
+      }
+    })
       .then(res => res.json())
       .then(sneakers => (this.setState({ sneakers: sneakers.results })))
       .catch(console.error)
